@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.0'
+ruby '2.2.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
@@ -48,5 +48,6 @@ end
 gem 'spree', '3.0.4'
 gem 'spree_gateway', github: 'spree/spree_gateway', branch: '3-0-stable'
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '3-0-stable'
+gem 'spree_mail_settings', github: 'spree-contrib/spree_mail_settings', branch: '3-0-stable'
 
 gem 'rails_12factor', group: :production

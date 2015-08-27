@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150826100263) do
+ActiveRecord::Schema.define(version: 20150827082608) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -108,6 +108,21 @@ ActiveRecord::Schema.define(version: 20150826100263) do
   add_index "spree_calculators", ["calculable_id", "calculable_type"], name: "index_spree_calculators_on_calculable_id_and_calculable_type", using: :btree
   add_index "spree_calculators", ["deleted_at"], name: "index_spree_calculators_on_deleted_at", using: :btree
   add_index "spree_calculators", ["id", "type"], name: "index_spree_calculators_on_id_and_type", using: :btree
+
+  create_table "spree_chimpy_order_sources", force: :cascade do |t|
+    t.integer  "order_id"
+    t.string   "campaign_id"
+    t.string   "email_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "spree_chimpy_subscribers", force: :cascade do |t|
+    t.string   "email",                     null: false
+    t.boolean  "subscribed", default: true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "spree_countries", force: :cascade do |t|
     t.string   "iso_name"
@@ -942,6 +957,7 @@ ActiveRecord::Schema.define(version: 20150826100263) do
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
+    t.boolean  "subscribed"
   end
 
   add_index "spree_users", ["deleted_at"], name: "index_spree_users_on_deleted_at", using: :btree

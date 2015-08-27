@@ -1,4 +1,13 @@
 GIT
+  remote: git://github.com/DynamoMTL/spree_chimpy.git
+  revision: f255a5c30aac8dc91ae6ac9f05e7a3eff16b8815
+  branch: 3-stable
+  specs:
+    spree_chimpy (2.0.0.alpha)
+      mailchimp-api (~> 2.0.5)
+      spree_core (~> 3.0)
+
+GIT
   remote: git://github.com/spree-contrib/spree_mail_settings.git
   revision: 99af7e4a137ac76fe4e93b1c8e5a38d81583904c
   branch: 3-0-stable
@@ -123,6 +132,7 @@ GEM
     devise-encryptable (0.1.2)
       devise (>= 2.1.0)
     erubis (2.7.0)
+    excon (0.45.4)
     execjs (2.6.0)
     ffaker (1.32.1)
     font-awesome-rails (4.4.0.0)
@@ -154,6 +164,9 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    mailchimp-api (2.0.6)
+      excon (>= 0.16.0)
+      json (>= 1.7.7)
     mime-types (2.6.1)
     mini_portile (0.6.2)
     minitest (5.8.0)
@@ -355,6 +368,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   spree (= 3.0.4)
   spree_auth_devise!
+  spree_chimpy!
   spree_gateway!
   spree_mail_settings!
   spring

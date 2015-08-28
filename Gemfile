@@ -53,3 +53,9 @@ gem 'spree_mail_settings', github: 'spree-contrib/spree_mail_settings', branch: 
 gem 'spree_chimpy', github: 'DynamoMTL/spree_chimpy', branch: '3-stable'
 
 gem 'rails_12factor', group: :production
+
+group :development do 
+  gem 'capistrano',  '~> 3.1'
+  gem 'capistrano-rails', '~> 1.1'
+  gem 'capistrano3-puma'
+end

@@ -44,7 +44,7 @@ server '52.21.2.99', user: 'ubuntu', roles: %w{app db web}
  set :ssh_options, {
    keys: %w(~/Downloads/zack-echo.pem),
    forward_agent: false,
-   auth_methods: %w(password)
+   auth_methods: %w(publickey)
  }
 #
 # The server-based syntax can be used to override options:
